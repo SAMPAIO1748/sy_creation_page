@@ -21,7 +21,7 @@ class PageController
      * @Route("/legal", name="legal")
      */
     public function legal(){
-        return new Response('Mentions légales du le super site de la mort qui tue');
+        return new Response('Mentions légales du super site de la mort qui tue');
     }
 
 }
