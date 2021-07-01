@@ -13,7 +13,7 @@ class ArticleController
      * @Route("/list", name="list")
      */
     public function list (){
-        return new Response("Liste d'articles du super site de la mort qui tue à donf");
+        return new Response("Liste d'articles du super site de la mort qui tue");
     }
 
 }
