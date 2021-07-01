@@ -14,14 +14,14 @@ class PageController
 
         // Je retourne une réponse HTTP valide en utilisant
         // la class Response du composant HttpFoundation
-        return new Response('Accueil');
+        return new Response('Accueil du super site de la mort qui tue');
     }
 
     /**
      * @Route("/legal", name="legal")
      */
     public function legal(){
-        return new Response('Mentions légales');
+        return new Response('Mentions légales de la vente des produits vendus sur le super site de la mort qui tue');
     }
 
 }
