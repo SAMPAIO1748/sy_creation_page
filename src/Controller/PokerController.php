@@ -20,12 +20,12 @@ class PokerController extends AbstractController
         $age = $request->query->get('age');
         if ($age >= 18){
             //return new Response("Vous êtes autorisé à jouer sur cette page");
-            // Retourne une page html
+            // Retourne une page html.twig
             return $this->render('poker.html.twig');
         }else{
             //return new Response("Vous n'êtes pas autorisé à jouer au poker");
             //return $this->redirectToroute('enfant');
-            // Retourne une page html
+            // Retourne une page html.twig
             return $this->render('enfant.html.twig');
         }
 
