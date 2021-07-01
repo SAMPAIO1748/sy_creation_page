@@ -1,0 +1,8 @@
+
+h1{
+    color: darkred;
+    border: darkred 5px solid;
+    width: 40%;
+    padding: 20px 50px;
+    border-radius: 20px;
+}
