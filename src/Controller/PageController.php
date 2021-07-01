@@ -25,20 +25,4 @@ class PageController
         return new Response('Mentions légales du super site de la mort qui tue');
     }
 
-    /**
-     * @Route("/contact", name="contact")
-     */
-    public function contact(){
-        $request = Request::createFromGlobals();
-        $age = $request->query->get('age');
-        if ($age >= 18){
-            return new Response("Vous êtes autorisé à lire cette page");
-        }else{
-            return new Response("Vous n'êtes pas autorisé à lire cette page");
-        }
-
-
-
-    }
-
 }
