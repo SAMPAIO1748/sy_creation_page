@@ -13,3 +13,10 @@ h2{
     padding: 20px 50px;
     border-radius: 20px;
 }
+
+div{
+    border-radius: 5px;
+    border: black 5px solid;
+    width: 60%;
+    margin: 10px auto;
+}

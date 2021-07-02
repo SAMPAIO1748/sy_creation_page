@@ -11,10 +11,14 @@
 
 </head>
 <body>
+
     {% for article in list %}
-    <center><h1> {{  article['title'] }} </h1></center>
-    <center><h2> {{  article['content'] }} </h2></center>
+        <div>
+            <center><h1> {{  article['title'] }} </h1></center>
+            <center><h2> {{  article['content'] }} </h2></center>
+        </div>
     {% endfor %}
+
 </body>
 </html>
 {% endapply %}
