@@ -3,11 +3,12 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
-class ArticleController
+class ArticleController extends AbstractController
 {
     /**
      * @Route("/articles", name="articleList")
@@ -23,7 +24,8 @@ class ArticleController
     */
    public function articleShow($id)
    {
-       return new Response("Article n°".$id);
+       //return new Response("Article n°".$id);
+       return $this->render('article.html.twig', ['id' => $id]);
    }
 
 
