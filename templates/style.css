@@ -6,3 +6,10 @@ h1{
     padding: 20px 50px;
     border-radius: 20px;
 }
+h2{
+    width: 50%;
+    border: darkblue 5px solid;
+    color: darkblue;
+    padding: 20px 50px;
+    border-radius: 20px;
+}

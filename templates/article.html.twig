@@ -7,12 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css">
-    <title>Page enfant</title>
+    <title>Article n°{{ article['id'] }}</title>
 
 </head>
 <body>
 
-<center><h1>Voici l'article n°{{ id }} </h1></center>
+<center><h1> {{  article['title'] }} </h1></center>
+<center><h2> {{  article['content'] }} </h2></center>
 
 </body>
 </html>
