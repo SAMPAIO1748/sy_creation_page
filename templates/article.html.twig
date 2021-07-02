@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="fr">
-{# permet de lire le css mais demande composer require twig/cssinliner-extra #}
-{% apply inline_css(source("style.css")) %}
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css">
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
     <title>Article n°{{ article.id }}</title>
 
 </head>
 <body>
 
+<div>
     <center><h1> {{  article.title }} </h1></center>
     <center><h2> {{  article.content }} </h2></center>
+</div>
+
+
 
 </body>
 </html>
-{% endapply %}
