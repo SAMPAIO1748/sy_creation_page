@@ -10,10 +10,22 @@ use Symfony\Component\Routing\Annotation\Route;
 class ArticleController
 {
     /**
-     * @Route("/list", name="list")
+     * @Route("/articles", name="articleList")
      */
-    public function list (){
+    public function articleList()
+    {
         return new Response("Liste d'articles du super site de la mort qui tue");
     }
+
+    /**
+     * @Route("/article/{id}", name="articleShow")
+     */
+    public function articleShow($id)
+    {
+        return new Response($id);
+    }
+
+
+
 
 }
