@@ -60,9 +60,14 @@ class ArticleController extends AbstractController
     */
    public function articleShow($id)
    {
-       $article = $this->articles[$id];
-       //return new Response("Titre de l'article : ".$article['title']);
-       return $this->render('article.html.twig', ['article' => $article]);
+       if(array_key_exists($id, $this->articles)){
+           $article = $this->articles[$id];
+           //return new Response("Titre de l'article : ".$article['title']);
+           return $this->render('article.html.twig', ['article' => $article]);
+       }else{
+           return $this->redirectToroute('home');
+       }
+
    }
 
 }
