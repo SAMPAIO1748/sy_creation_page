@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
-{% apply inline_css(source("style.css")) %}
+{# permet de lire le css apply inline_css(source("style.css"))#}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {# asset permet de lire le fichier css placé dans le dossier public #}
     <link rel="stylesheet" href="{{ asset('style.css') }}">
     <title>Liste articles</title>
 
@@ -20,7 +21,8 @@
         {% for article in list %}
             <div class="row">
                 <article>
-                    <center><h1> {{  article.title }} </h1></center>
+                    {# path permet de rediriger vers une url grace au nom de la route et des paramètres de cette route si nécessaire #}
+                    <center><a href="{{ path('ArticleShow', {'id' : article.id}) }}"><h1> {{  article.title }} </h1></a></center>
                     <center><h2> {{  article.content }} </h2></center>
                 </article>
             </div>
@@ -36,4 +38,4 @@
 
 </body>
 </html>
-{% endapply %}
+{# endapply#}

@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ArticleController extends AbstractController
 {
 
-    public $articles = [
+    private $articles = [
         1 => [
         "title" => "La vaccination c'est trop géniale",
         "content" => "Lorem ipsum dolor sit, amet consectetur adipisicing elit.
