@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
-    <title>Article n°{{ article.id }}</title>
-
-</head>
-<body>
+{% include '_header.html.twig' %}
 
 <center><div class="fluid">
     <center><h1> {{  article.title }} </h1></center>
     <center><h2> {{  article.content }} </h2></center>
 </div></center>
 
+{% include '_footer.html.twig' %}
 
 
-</body>
-</html>

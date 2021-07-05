@@ -1,24 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-{# permet de lire le css apply inline_css(source("style.css"))#}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {# asset permet de lire le fichier css placé dans le dossier public #}
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
-    <title>Liste articles</title>
-
-</head>
-<body>
-
-<header>
-    <p>Journal LA PISCINE</p>
-</header>
-
-<main>
+{% include '_header.html.twig' %}
     <div class="container">
         {% for article in list %}
+            {% if article.published %}
             <div class="row">
                 <article>
                     {# path permet de rediriger vers une url grace au nom de la route et des paramètres de cette route si nécessaire #}
@@ -26,16 +9,8 @@
                     <center><h2> {{  article.content }} </h2></center>
                 </article>
             </div>
-
+            {% endif %}
         {% endfor %}
     </div>
-</main>
 
-<footer>
-    <p>Journal LA PISCINE</p>
-</footer>
-
-
-</body>
-</html>
-{# endapply#}
+{% include '_footer.html.twig' %}
