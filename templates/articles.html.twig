@@ -2,10 +2,13 @@
 
 {# Les blocs remplissent les trous faits dans le fichier base.html.twig #}
 {% block metaTitle %}
+
     Liste des aticles
+
 {% endblock metaTitle %}
 
 {% block main %}
+
     <div class="container">
         {% for article in list %}
             {% if article.published %}
@@ -24,5 +27,7 @@
 {% endblock main %}
 
 {% block textFooter %}
-    Journal LA PISCINE
+
+    Vous lisez le journal LA PISCINE
+
 {% endblock textFooter %}
