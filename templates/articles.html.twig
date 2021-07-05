@@ -1,4 +1,11 @@
-{% include '_header.html.twig' %}
+{%  extends 'base.html.twig' %}
+
+{# Les blocs remplissent les trous faits dans le fichier base.html.twig #}
+{% block metaTitle %}
+    Liste des aticles
+{% endblock metaTitle %}
+
+{% block main %}
     <div class="container">
         {% for article in list %}
             {% if article.published %}
@@ -13,4 +20,9 @@
         {% endfor %}
     </div>
 
-{% include '_footer.html.twig' %}
+
+{% endblock main %}
+
+{% block textFooter %}
+    Journal LA PISCINE
+{% endblock textFooter %}
